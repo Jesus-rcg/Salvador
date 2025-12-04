@@ -24,7 +24,10 @@ use App\Http\Middleware\CheckAuth;
 
 
 // LOGIN
-Route::get('/', [LoginController::class, 'showLogin'])->name('login');
+Route::get('/', function (){
+    return view('index');
+});
+
 Route::get('/login', [LoginController::class, 'showLogin'])->name('login');
 Route::post('/login', [LoginController::class, 'login'])->name('login.post');
 
