@@ -33,7 +33,7 @@
 
 }
 
-.primer-torneo{
+.tarjeta-torneo {
   background: #ffffff;
   border: 1.5px solid #000000;
   display: flex;
@@ -46,9 +46,10 @@
   padding: 1rem 0.5rem;
 }
 
-.imagen-torneo1{
+/* --- CONTENEDOR DE IMAGEN --- */
+.imagen {
   width: 100%;
-  height: 100%;
+  height: 220px;
   display: flex;
   border: 1.5px solid #000000;
   align-items: center;
@@ -58,14 +59,15 @@
   box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 
-.imagen-torneo1 img {
+.imagen img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
 
-.textotorneo1 {
+/* --- TEXTO DE LA TARJETA --- */
+.texto {
   background: #f9f9f9;
   border: 1.5px solid #000000;
   padding: 1rem;
@@ -78,177 +80,34 @@
   margin-top: 1rem;
 }
 
-.textotorneo1 h3{
+.texto h3 {
   margin: 0 0 0.6rem 0;
   font-size: 1.3rem;
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
 }
 
-.textotorneo1 p{
+.texto p {
   margin: 0 0 1rem 0;
   font-size: 1rem;
 }
 
-.torneo1-boton{
+
+.boton {
   display: block;
   text-align: center;
-  margin-top: 0.3rem;
+  margin-top: 0.8rem;
   padding: 8px 14px;
   border-radius: 8px;
-  background: rgb(25, 25, 112) ;
+  background: rgb(25, 25, 112);
   color: #ffffff;
   text-decoration: none;
   font-weight: 600;
-  align-self: flex-end;
   border: 1px solid #000000;
   transition: transform 0.15s ease;
-  margin-top: 0.8rem;
 }
 
-.segundo-torneo{
-  background: #ffffff;
-  border: 1.5px solid #000000;
-  display: flex;
-  overflow: hidden;
-  flex-direction: column;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-  width: 100%;
-  max-width: 350px;
-  border-radius: 8px;
-  padding: 1rem 0.5rem;
-}
 
-.imagen-torneo2{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  border: 1.5px solid #000000;
-  align-items: center;
-  justify-content: center;
-  background: #eee;
-  overflow: hidden;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+.boton:hover {
+  transform: scale(1.04);
 }
-
-.imagen-torneo2 img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.textotorneo2 {
-  background: #f9f9f9;
-  border: 1.5px solid #000000;
-  padding: 1rem;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-  box-sizing: border-box;
-  margin-top: 1rem;
-}
-
-.textotorneo2 h3{
-  margin: 0 0 0.6rem 0;
-  font-size: 1.3rem;
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: bold;
-}
-
-.textotorneo2 p{
-  margin: 0 0 1rem 0;
-  font-size: 1rem;
-}
-
-.torneo2-boton{
-  display: block;
-  text-align: center;
-  margin-top: 0.3rem;
-  padding: 8px 14px;
-  border-radius: 8px;
-  background: rgb(25, 25, 112)  ;
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 600;
-  align-self: flex-end;
-  border: 1px solid #000000;
-  transition: transform 0.15s ease;
-  margin-top: 0.8rem;
-}
-
-.tercer-torneo{
-  background: #ffffff;
-  border: 1.5px solid #000000;
-  display: flex;
-  overflow: hidden;
-  flex-direction: column;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-  width: 100%;
-  max-width: 350px;
-  border-radius: 8px;
-  padding: 1rem 0.5rem;
-}
-
-.imagen-torneo3{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  border: 1.5px solid #000000;
-  align-items: center;
-  justify-content: center;
-  background: #eee;
-  overflow: hidden;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-}
-
-.imagen-torneo3 img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.textotorneo3 {
-  background: #f9f9f9;
-  border: 1.5px solid #000000;
-  padding: 1rem;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-  box-sizing: border-box;
-  margin-top: 1rem;
-}
-
-.textotorneo3 h3{
-  margin: 0 0 0.6rem 0;
-  font-size: 1.3rem;
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: bold;
-}
-
-.textotorneo3 p{
-  margin: 0 0 1rem 0;
-  font-size: 1rem;
-}
-
-.torneo3-boton{
-  display: block;
-  text-align: center;
-  margin-top: 0.3rem;
-  padding: 8px 14px;
-  border-radius: 8px;
-  background: rgb(25, 25, 112) ;
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 600;
-  align-self: flex-end;
-  border: 1px solid #000000;
-  transition: transform 0.15s ease;
-  margin-top: 0.8rem;
-}
-

@@ -24,9 +24,7 @@ use App\Http\Middleware\CheckAuth;
 
 
 // LOGIN
-Route::get('/', function (){
-    return view('index');
-});
+Route::get('/', [torneosController::class, 'inicioVisitante'])->name('inicio');
 
 Route::get('/login', [LoginController::class, 'showLogin'])->name('login');
 Route::post('/login', [LoginController::class, 'login'])->name('login.post');
