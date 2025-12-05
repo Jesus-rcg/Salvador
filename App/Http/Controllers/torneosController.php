@@ -43,7 +43,8 @@ class TorneosController extends Controller
             'id_usuario'    => 'required',
             'estado'        => 'required',
             'max_equipos'   => 'required|numeric',
-            'tipo_torneo'   => 'required',
+            'tipo_torneo'   => 'nullable|string',
+            'imagen' => 'required'
         ]);
 
         DB::table('torneos')->insert([
@@ -56,6 +57,7 @@ class TorneosController extends Controller
             'estado'        => $request->estado,
             'max_equipos'   => $request->max_equipos,
             'tipo_torneo'   => $request->tipo_torneo,
+            'imagen' => $request->imagen,
         ]);
 
         return redirect()->route('torneos.index');
@@ -73,6 +75,7 @@ class TorneosController extends Controller
             'estado'        => $request->estado,
             'max_equipos'   => $request->max_equipos,
             'tipo_torneo'   => $request->tipo_torneo,
+            'images' => $request->images,
         ]);
 
         return redirect()->route('torneos.index');
@@ -100,5 +103,11 @@ class TorneosController extends Controller
                 ->route('torneos.index')
                 ->with('error', 'Error inesperado. Contacte al administrador.');
         }
+    }
+
+    public function inicioVisitante()
+    {
+        $torneos = Torneo::orderBy('id_torneo', 'desc')->take(3)->get();
+        return view('index', compact('torneos'));
     }
 }

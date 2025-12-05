@@ -21,7 +21,10 @@ class Torneo extends Model
         'estado',
         'max_equipos',
         'tipo_torneo',
+        'imagen'
     ];
 
     public $timestamps = false;
+
+    
 }
