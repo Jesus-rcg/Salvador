@@ -1,0 +1,301 @@
+.caja{
+  width: 60%;
+  height: auto;
+  padding: 3px;
+  border-radius: 15px;
+  background: rgba(0,0,0,0.12);
+}
+
+.bottones-tabla{
+  border: 1px solid black;
+  border-radius: 15px;
+  background: white;
+  padding: 10px;
+}
+
+.botton{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+} 
+
+.bottones{
+  /* background: white; */
+  height: 30px;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.bottones:hover{
+  background: white;
+  transform: scale(1.1); 
+}
+
+.equipo{
+  display: flex;
+  font-weight: bold;
+  justify-content: center;
+  gap: 10px;
+} 
+
+.escudo{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.plantilla{
+  margin: 5px 0px 5px 0px; 
+  background: rgba(225,225,225,0.95);
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.jornada{
+  width: 100%;
+  margin: 0px;
+  padding: 10px 0px;
+  background: rgba(0,0,0,0.50);
+  border: 1px solid rgb(120, 120, 120);
+  border-radius: 7px;
+  text-align: center;
+}
+
+.partidos-lista {
+    padding: 5px;
+}
+
+/*barra de partidos */
+.partido {
+    background: #ffffff;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 5px; /*borde inferior de la barra de equipo*/
+    overflow: hidden;  /*permite que los se le pueda poner radio al borde*/
+    border: 1px solid rgba(0,0,0,0.40);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Checkbox oculto para controlar la animación */
+.partido-checkbox {
+    display: none;
+}
+
+/* ENCABEZADO DEL PARTIDO */
+.partido-encabezado {
+    display: flex;                  /* Activar Flexbox */
+    justify-content: space-between; /* Espaciado entre los hijos */
+    align-items: center;            /* Centrar en el eje vertical */
+    padding: 3px;
+    background: #f8f9fa;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/*color que resalta cuando pasa el mouse*/
+.partido-encabezado:hover {
+    background: rgba(0,0,0,0.20);
+}
+
+.partido-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.partido-info span {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.escudo-vs{
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+.equipos {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: space-between;
+    margin: 0 15px;                   /*margen del nombre de los equipos*/
+}
+
+.equipo {
+    width: 40%;
+    font-weight: bold;            /*texto negrita*/
+    text-align: center;
+}
+
+.resultado {
+    font-size: 24px;              /*tamaño del texto*/
+    font-weight: bold;            /*texto negrita*/
+    color: rgb(0, 0, 0);
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.flecha {
+    font-size: 18px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+/* DETALLES DEL PARTIDO (ocultos por defecto) */
+.partido-detalles {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    background: #fafafa;
+}
+
+/* Cuando el checkbox está checked, mostrar detalles */
+.partido-checkbox:checked ~ .partido-detalles {
+    max-height: 2000px;  /*el alto del despliegue de la informacion del resultado*/
+}
+
+/* Rotar flecha cuando está expandido */
+.partido-checkbox:checked ~ .partido-encabezado .flecha {
+    transform: rotate(180deg);
+}
+
+.detalles-cuerpo {
+    gap: 20px;
+    padding: 10px;
+} 
+
+/* SECCIONES */
+.seccion {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.seccion h3 {
+    background: rgba(0,0,0,0.30);
+    margin: -10px 0 2px 0;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.12);
+}
+
+.detalle-equipo{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*pone los cuadros en la misma linea*/
+    gap: 10px;
+    padding: 10px;
+}
+
+/* ESTADÍSTICAS */
+.estadistica-item {
+    /* display: flex;      coloca los elementos hijos
+    justify-content: space-between;    hijo 1 izquierda, 2 centro, 3 derecha*/
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 5px;
+}
+
+.estadistica-nombre {
+    text-align: center;
+    font-weight: 600;
+}
+
+.estadistica-local {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
+}
+
+.estadistica-visitante {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 20px;
+}
+
+.tiempo { 
+    font-weight: 600;
+}
+
+.marcador{
+    border: 1px solid rgba(0,0,0,0.12);
+    border-radius: 8px;
+    padding: 5px;
+    margin: 0 10px 0 10px;
+}
+
+.balon{
+    width: 13px;
+    height: 13px;
+}
+
+td{
+    padding: 5px;
+}
+
+.color-tarjeta{
+    color: yellow;
+    background: yellow;
+    width: 40px;
+    height: 30px;
+    margin: 0 10px 0 10px;
+    border-radius: 5px;
+}
+
+/* CUERPO ARBITRAL */
+.arbitro-item {
+    /* display: flex;
+    margin-bottom: 10px; */
+}
+
+.arbitro-rol {
+    font-weight: auto;
+    min-width: auto;
+    margin-right: 10px; 
+} 
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .detalles-cuerpo {
+        grid-template-columns: 1fr;
+    }
+    
+    .equipos {
+        flex-direction: column;
+        margin: 10px 0;
+    }
+    
+    .equipo {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .resultado {
+        margin: 10px 0;
+    }
+    
+    .estadistica-item {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .arbitro-item {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .arbitro-rol {
+        min-width: auto;
+        margin-right: 0;
+    }
+    
+    .partido-encabezado {
+        flex-wrap: wrap;
+    }
+}

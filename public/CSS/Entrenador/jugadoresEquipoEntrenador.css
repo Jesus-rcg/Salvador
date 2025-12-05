@@ -1,0 +1,133 @@
+main{
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #333;
+    padding: 2.5rem 3.0rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.subtitulo {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #111;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    border-bottom: 4px solid rgba(0,0,0,0.12);
+    margin-top: -30px;
+}
+
+.tabla{
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.tabla-contenedor{
+    display: inline-block;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    overflow: hidden;
+}   
+
+table{
+    border-collapse: collapse;
+    border-radius: 6px;
+}
+
+table th, table td{
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    text-align: center;
+}
+
+table th{
+    background-color: #222;
+    color: white;
+    font-weight: bold;
+}
+
+.acciones{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 12px;
+    border-top: 1px solid #ddd;
+    background: #f9f9f9;
+    border-radius: 0 0 6px 6px;
+}
+
+
+.acciones button{
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.boton-editar{
+    background: #1976d2;
+    color: white;
+}
+
+.boton-editar:hover{
+    background: #125a9c;
+}
+
+.boton-eliminar{
+    background: #d32f2f;
+    color: white;
+}
+
+.boton-eliminar:hover{
+    background: #a32121;
+}
+
+.boton-añadir{
+    background: #388e3c;
+    color: white;
+}
+
+.boton-añadir:hover{
+    background: #256428;
+}
+
+.terminos{
+    width: 25%;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 12px;
+    font-size: 10px;
+    line-height: 1.5;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.terminos h3{
+    margin-top: 0;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.terminos ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+.terminos ul li{
+    margin-bottom: 6px;
+}
+

@@ -1,0 +1,126 @@
+
+.g{
+  width: 30px;
+  height: 30px;
+  background-color: rgb(2, 250, 2);
+  border: 1px solid white;
+  border-radius: 30px;
+}
+
+.e{
+  width: 30px;
+  height: 30px;
+  background-color: rgb(104, 104, 103);
+  border: 1px solid white;
+  border-radius: 30px;
+}
+
+.p{
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border: 1px solid white;
+  border-radius: 30px;
+}
+
+/*tabla de posiciones*/
+.tabla {
+  border: 1.5px solid black;
+  border-radius: 8px;
+  background-color: white;
+  width: 100%;
+  border-collapse: collapse;      
+  margin: 5px 0 0 0;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  flex-direction: column;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12); 
+}
+
+tr {
+  border: 1px solid rgba(0,0,0,0.12);
+  padding: 5px;
+}
+
+.efecto {
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+th {
+  color:rgb(255, 255, 255);
+  background-color: rgb(120, 120, 120);
+}
+
+.efecto:hover {
+  background-color: rgba(0,0,0,0.12);
+  color: black;
+}
+
+.posicion{
+  background-color:rgb(120, 120, 120);
+}
+
+.t{
+  background: red;
+  border-radius: 8px;
+}
+
+.enfre{
+  text-align: center;
+}
+
+.caja{
+  width: 60%;
+  height: auto;
+  padding: 3px;
+  border-radius: 15px;
+  background: rgba(0,0,0,0.12);
+}
+
+.bottones-tabla{
+  width: auto;
+  border: 1px solid black;
+  border-radius: 15px;
+  background: white;
+  padding: 10px;
+}
+
+.imagen-torneo{
+  width: 100px;
+  height: 80px;
+  border-radius: 20px;
+  margin: 0 40px 0 0;
+}
+
+.torneo{
+  display: flex;
+  font-weight: bold;
+  justify-content: center;
+  gap: 10px;
+}
+
+.bottones-tabla{
+  position: center;
+}
+
+.botton{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.bottones{
+  background: white;
+  height: 30px;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.bottones:hover{
+  background: white;
+  transform: scale(1.1); 
+}

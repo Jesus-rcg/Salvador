@@ -1,0 +1,43 @@
+.tabla-partidos {
+  font-size: 16px;
+  color: #000000;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 900px;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border: 1px #000000 solid;
+}
+
+.tabla-partidos table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.tabla-partidos th, .tabla-partidos td {
+  border: 2px solid black;
+  padding: 12px;
+  font-size: 16px;
+}
+
+.tabla-partidos th {
+  background: #f3f3f3;
+  font-weight: bold;
+}
+.equipo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 10px;
+}
+
+.equipo img {
+  width: 35px;   
+  height: 35px;
+  object-fit: contain;
+}
+    

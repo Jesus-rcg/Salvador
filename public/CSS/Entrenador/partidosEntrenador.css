@@ -1,0 +1,103 @@
+.cuerpo {
+  padding: 2.5rem 3.0rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.subtitulo {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #111;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  border-bottom: 4px solid rgba(0,0,0,0.12);
+  margin-top: -30px;
+}
+
+.Contenedor-Torneos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.tarjetas{
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 280px;
+    text-align: center;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tarjetas:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.tarjetas h3{
+    font-size: 16px;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.partido{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #000;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background: #fff;
+}
+
+.logo-equipos{
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.resultado{
+    font-size: 15px;
+    margin: 0 10px;
+}
+
+.externo{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.externo p{
+    font-size: 13px;
+    margin: 0px;
+    color: #333;
+}
+
+.externo button{
+    background: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.externo button:hover {              
+  background: #cfcece;                         
+  transform: scale(1.05);                   
+}
