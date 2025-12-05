@@ -75,7 +75,7 @@ class TorneosController extends Controller
             'estado'        => $request->estado,
             'max_equipos'   => $request->max_equipos,
             'tipo_torneo'   => $request->tipo_torneo,
-            'images' => $request->images,
+            'imagen' => $request->imagen,
         ]);
 
         return redirect()->route('torneos.index');
