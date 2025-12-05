@@ -1,0 +1,120 @@
+.caja{
+  width: 60%;
+  height: auto;
+  padding: 3px;
+  border-radius: 15px;
+  background: rgba(0,0,0,0.12);
+}
+
+.bottones-tabla{
+  border: 1px solid black;
+  border-radius: 15px;
+  background: white;
+  padding: 10px;
+}
+
+.botton{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+} 
+
+.bottones{
+  background: white;
+  height: 30px;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.bottones:hover{
+  background: white;
+  transform: scale(1.1); 
+}
+
+.equipo{
+  display: flex;
+  font-weight: bold;
+  justify-content: center;
+  gap: 10px;
+} 
+
+.escudo{
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+}
+
+.plantilla{
+  margin: 5px 0px 5px 0px; 
+  background: rgba(225,225,225,0.95);
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.posicion{
+  margin: 0px;
+  padding: 10px 0px;
+  background: rgba(0,0,0,0.50);
+  border: 1px solid rgb(120, 120, 120);
+  border-radius: 7px;
+}
+
+.caja-externa {
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  background-image: url('../Images/usuario.png');
+  background-size: cover;    /* La imagen cubre toda la caja */
+  background-position: center; /* Centrada */
+  position: relative;
+}
+.caja-interna {
+  border-radius: 8px;
+  width: 20px;
+  height: 20px;
+  background-image: url('../Images/dorsal1.png');
+  background-size: cover;    /* La imagen cubre toda la caja */
+  background-position: center; /* Centrada */
+  position: absolute;   /* Se posiciona dentro de la caja externa */
+  bottom: 0px;         /* Distancia desde la parte inferior */
+  right: 0px;         /* Distancia desde la parte derecha*/
+  text-align: center;
+}
+
+.texto-superpuesto {
+  position: absolute;
+  top: 5px;           /* Distancia desde arriba */
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 10px; /* tamaño del texto*/
+}
+
+.tarjeta-amarilla{
+  width: 15px;
+  height: 20px;
+  background: yellow;
+  border-radius: 5px;
+}
+
+.tarjeta-roja{
+  width: 15px;
+  height: 20px;
+  background: red;
+  border-radius: 5px;
+}
+
+.lesion{
+  width: 15px;
+  height: 20px;
+  background: url('../Images/lesion.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+}
+
+.datos{
+  padding: 0px 50px 0px 10px;
+}

@@ -1,0 +1,56 @@
+.rectangulo {
+  font-size: 14px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;    
+  justify-content: space-around;
+  background-color: rgb(255, 255, 255); 
+  padding: 50px;
+  border:#000000 solid 1px; 
+  border-radius: 10px;
+  width: 80%;
+  max-width: 450px;
+  color: #000000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+.equipos {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  width: 100%;
+}
+
+.equipos input {
+  padding: 10px;
+  border: 1px solid #ccc; 
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.equipos button {
+  padding: 10px 16px;
+  border: none;
+  background-color: #59695a;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  border-color: #000000 ;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: 0.3s;
+}
+
+.equipos button:hover {
+  background-color: #45a049;
+}
+
+
+

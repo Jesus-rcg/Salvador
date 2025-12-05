@@ -1,0 +1,55 @@
+
+
+/* Caja de confirmación */
+.confirmation-box {
+  max-width: 700px;
+  margin: 100px auto;
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.icono {
+  font-size: 40px;
+  color: green;
+  margin-bottom: 20px;
+}
+
+.confirmation-message h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.confirmation-message p {
+  font-size: 16px;
+  font-family: 'Roboto', Arial, sans-serif;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: green;
+  font-weight: bold;
+}
+
+/* Botón confirmar */
+.btn-container {
+  margin-top: 20px;
+}
+
+.btn-confirm {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-confirm:hover {
+  background-color: #218838; 
+  transform: scale(1.05);   
+}

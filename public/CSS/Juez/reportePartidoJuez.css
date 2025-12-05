@@ -1,0 +1,122 @@
+
+.caja{
+    background: white;
+    padding: 3px;
+
+}
+
+/* Contenedor principal */
+.contenedor {
+    background: white;
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 900px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.contenedor h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Formulario */
+.formulario label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+    width: 100%;
+    padding: 6px;
+    margin-top: 4px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+
+.fila {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.botones{
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+}
+
+.btn-agregar {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px auto 0;
+}
+
+.btn-agregar:hover {
+    background: #218838;
+}
+
+.btn-visualizar {
+    background: rgba(33, 163, 8, 0.541);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px auto 0;
+}
+
+.btn-visualizar:hover {
+    background: rgba(207, 207, 1, 0.831);
+}
+
+.btn-finalizar {
+    background: rgb(200, 0, 0);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px auto 0;
+}
+
+.btn-finalizar:hover {
+    background: rgba(255, 0, 0, 0.913);
+}
+
+.escudo-vs{
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+.equipos {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: space-between;
+    margin: 0 130px ;                   /*margen del nombre de los equipos*/
+}
+
+.equipo {
+    font-weight: bold;            /*texto negrita*/
+    text-align: center;
+}
+
+.resultado {
+    font-size: 24px;              /*tamaño del texto*/
+    font-weight: bold;            /*texto negrita*/
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+}
