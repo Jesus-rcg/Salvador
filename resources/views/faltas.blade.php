@@ -1,4 +1,4 @@
-@extends('welcome')
+@extends('dashboard')
 
 @section('title', 'Faltas')
 @section('content')
@@ -37,7 +37,6 @@
                         <th>Identificación de la falta</th>
                         <th>Identificación del encuentro</th>
                         <th>Nombre del jugador</th>
-                        <th>Nombre del tipo de falta</th>
                         <th>Minuto</th>
                         <th>Tarjeta</th>
                         <th>Descripción</th>
@@ -49,8 +48,7 @@
                         <tr>
                             <td>{{ $item->id_falta }}</td> 
                             <td>{{ $item->id_encuentro }} </td>
-                            <td>{{ $item->nombre_usuario }} {{ $item->apellido_usuario }}</td>
-                            <td>{{ $item->falta_nombre }}</td>
+                            <td>{{ $item->nombre_jugador }} </td>
                             <td>{{ $item->minuto }}</td>
                             <td>{{ $item->tarjeta }}</td>
                             <td>{{ $item->descripcion }}</td>
@@ -104,20 +102,7 @@
                                                         <option value="{{ $jugador->id_jugador }}"
                                                             {{ $jugador->id_jugador == $item->id_jugador ? 'selected' : '' }}>
                                                             
-                                                            {{ $jugador->nombre_usuario }} {{ $jugador->apellido_usuario }}
-                                                        </option>
-                                                    @endforeach
-                                                </select>
-                                            </div>
-
-                                            <div class="mb-3">
-                                                <label for="id_tipo_falta" class="form-label">Tipo de falta:</label>
-                                                <select class="form-select" name="id_tipo_falta" required>
-                                                    @foreach($tipo_falta as $tipo)
-                                                        <option value="{{ $tipo->id_tipo_falta }}"
-                                                            {{ $tipo->id_tipo_falta == $item->id_tipo_falta ? 'selected' : '' }}>
-                                                            
-                                                            {{ $tipo -> nombre }}
+                                                            {{ $jugador->nombre_jugador }}
                                                         </option>
                                                     @endforeach
                                                 </select>
@@ -192,17 +177,7 @@
                                 <select class="form-select" name="id_jugador" required>
                                     <option value="" hidden disable selected>Seleccione un jugador</option>
                                     @foreach($jugadores as $jugador)
-                                        <option value="{{ $jugador->id_jugador }}">{{ $jugador->nombre_usuario }} {{ $jugador->apellido_usuario }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="id_tipo_falta" class="form-label">Tipo de falta::</label>
-                                <select class="form-select" name="id_tipo_falta" required>
-                                    <option value="" hidden disable selected>Seleccione un tipo de falta</option>
-                                    @foreach($tipo_falta as $tipo)
-                                        <option value="{{ $tipo->id_tipo_falta }}">{{ $tipo->nombre }}</option>
+                                        <option value="{{ $jugador->id_jugador }}">{{ $jugador->nombre_jugador }}</option>
                                     @endforeach
                                 </select>
                             </div>

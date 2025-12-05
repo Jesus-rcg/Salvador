@@ -16,13 +16,9 @@ class faltasController extends Controller
 
         ->join('encuentros', 'faltas.id_encuentro', '=', 'encuentros.id_encuentro')
         ->join('jugadores', 'faltas.id_jugador', '=', 'jugadores.id_jugador')
-        ->join('usuarios', 'jugadores.id_usuario', '=', 'usuarios.id_usuario')
-        ->join('tipo_falta', 'faltas.id_tipo_falta', '=', 'tipo_falta.id_tipo_falta')
         ->select(
             'faltas.*',
-            'tipo_falta.nombre as falta_nombre',
-            'usuarios.nombre as nombre_usuario',
-            'usuarios.apellido as apellido_usuario'
+            'jugadores.nombre_jugador as nombre_jugador'
         );
 
     if($search){
@@ -30,45 +26,36 @@ class faltasController extends Controller
             $q->where('faltas_id_falta','LIKE',"%{$search}%")
               ->orWhere('faltas.id_encuentro','LIKE',"%{$search}%")
               ->orWhere('faltas.id_jugador','LIKE',"%{$search}%")
-              ->orWhere('fechas.id_tipo_falta','LIKE',"%{$search}%")
-              ->orWhere('tipo_falta.nombre','LIKE',"%{$search}%")
-              ->orWhere('usuarios.nombre','LIKE',"%{$search}%")
-              ->orWhere('usuarios.apellido','LIKE',"%{$search}%")
-              ->orWhere('fechas.minuto','LIKE',"%{$search}%")
-              ->orWhere('fechas.tarjeta','LIKE',"%{$search}%")
-              ->orWhere('fechas.descripcion','LIKE',"%{$search}%");
+              ->orWhere('jugadores.nombre_jugador','LIKE',"%{$search}%")
+              ->orWhere('faltas.minuto','LIKE',"%{$search}%")
+              ->orWhere('faltas.tarjeta','LIKE',"%{$search}%")
+              ->orWhere('faltas.descripcion','LIKE',"%{$search}%");
         });
     }
         $datos = $query->paginate(10)->appends($request->only('search'));
 
         $encuentros = DB::table('encuentros')->get();
         $jugadores = DB::table('jugadores')
-                ->join('usuarios', 'jugadores.id_usuario', '=', 'usuarios.id_usuario')
                 ->select(
-                    'jugadores.id_jugador',
-                    'usuarios.nombre as nombre_usuario',
-                    'usuarios.apellido as apellido_usuario'
+                    'id_jugador',
+                    'nombre_jugador'
                 )
             ->get();
 
-        $tipo_falta = DB::table('tipo_falta')->get();
 
-        return view("faltas", compact('datos', 'encuentros', 'jugadores', 'tipo_falta'));
+        return view("faltas", compact('datos', 'encuentros', 'jugadores'));
     }
     
     public function create(){
     $encuentros = DB::table('encuentros')->get(); 
     $jugadores = DB::table('jugadores')
-            ->join('usuarios', 'jugadores.id_usuario', '=', 'usuarios.id_usuario')
             ->select(
-                'jugadores.id_jugador',
-                'usuarios.nombre as nombre_usuario',
-                'usuarios.apellido as apellido_usuario'
+                'id_jugador',
+                'nombre_jugador'
             )
         ->get();
-    $tipo_falta = DB::table('tipo_falta')->get();
 
-    return view('faltas.create', compact('encuentros', 'jugadores', 'tipo_falta'));
+    return view('faltas.create', compact('encuentros', 'jugadores'));
     }
 
     //Crear
@@ -77,7 +64,6 @@ class faltasController extends Controller
             'id_falta' => 'required|unique:faltas,id_falta',
             'id_encuentro' => 'required',
             'id_jugador'  => 'required',
-            'id_tipo_falta' => 'required',
             'minuto' => 'required',
             'tarjeta' => 'required',
             'descripcion' => 'required',
@@ -95,7 +81,6 @@ class faltasController extends Controller
         $falta ->update([
             'id_encuentro' => $request->id_encuentro,
             'id_jugador' => $request->id_jugador,
-            'id_tipo_falta' => $request->id_tipo_falta,
             'minuto' => $request->minuto,
             'tarjeta' => $request->tarjeta,
             'descripcion' => $request->descripcion,
